@@ -1,0 +1,32 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# Maven / Gradle
+target/
+build/
+
+# Logs
+*.log
+
+# Spring Boot / Configuración sensible
+src/main/resources/application.yml
+src/main/resources/application.properties
+
+# Docker
+docker-compose.override.yml
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros
+*.class

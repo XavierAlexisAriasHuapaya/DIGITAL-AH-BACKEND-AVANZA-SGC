@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: avanza.erp
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_database_name
+    username: your_db_user
+    password: your_db_password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+server:
+  servlet:
+    context-path: /api/avanza-erp/digital-ah
+  port: 8080
