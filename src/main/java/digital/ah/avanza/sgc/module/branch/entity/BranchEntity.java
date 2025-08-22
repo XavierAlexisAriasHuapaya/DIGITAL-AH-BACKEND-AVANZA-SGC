@@ -3,7 +3,7 @@ package digital.ah.avanza.sgc.module.branch.entity;
 import java.time.ZonedDateTime;
 
 import digital.ah.avanza.sgc.module.company.entity.CompanyEntity;
-import digital.ah.avanza.sgc.module.master.entity.CatalogItemEntity;
+import digital.ah.avanza.sgc.module.currency.entity.CurrencyEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,7 +37,7 @@ public class BranchEntity {
 
     @ManyToOne
     @JoinColumn(name = "currency_id")
-    private CatalogItemEntity currency;
+    private CurrencyEntity currency;
 
     private String name;
 

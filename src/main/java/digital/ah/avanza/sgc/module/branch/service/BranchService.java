@@ -19,9 +19,9 @@ import digital.ah.avanza.sgc.module.branch.repository.BranchRepository;
 import digital.ah.avanza.sgc.module.company.dto.CompanyOneDTO;
 import digital.ah.avanza.sgc.module.company.entity.CompanyEntity;
 import digital.ah.avanza.sgc.module.company.service.CompanyService;
-import digital.ah.avanza.sgc.module.master.dto.CatalogItemOneDTO;
-import digital.ah.avanza.sgc.module.master.entity.CatalogItemEntity;
-import digital.ah.avanza.sgc.module.master.services.CatalogItemService;
+import digital.ah.avanza.sgc.module.currency.dto.CurrencyOneDTO;
+import digital.ah.avanza.sgc.module.currency.entity.CurrencyEntity;
+import digital.ah.avanza.sgc.module.currency.service.CurrencyService;
 import digital.ah.avanza.sgc.utils.exception.MessageException;
 import digital.ah.avanza.sgc.utils.model.PageDTO;
 import lombok.AllArgsConstructor;
@@ -34,7 +34,7 @@ public class BranchService implements BranchImplement {
 
     private final CompanyService companyService;
 
-    private final CatalogItemService catalogItemService;
+    private final CurrencyService currencyService;
 
     @Transactional
     @Override
@@ -48,13 +48,13 @@ public class BranchService implements BranchImplement {
             throw new MessageException("Branch with name " + branch.getName() + " already exists");
         }
 
-        CatalogItemOneDTO catalogItemDTO = this.catalogItemService.findOne(branch.getCurrency());
-        CatalogItemEntity catalogItemEntity = CatalogItemEntity
-                .builder().id(catalogItemDTO.getId()).build();
+        CurrencyOneDTO currencyOne = this.currencyService.findOne(branch.getCurrency());
+        CurrencyEntity currencyEntity = CurrencyEntity
+                .builder().id(currencyOne.getId()).build();
 
         BranchEntity branchEntity = BranchEntity.builder()
                 .company(companyEntity)
-                .currency(catalogItemEntity)
+                .currency(currencyEntity)
                 .name(branch.getName())
                 .address(branch.getAddress())
                 .city(branch.getCity())
@@ -83,11 +83,11 @@ public class BranchService implements BranchImplement {
             }
         }
 
-        CatalogItemOneDTO catalogItemDTO = this.catalogItemService.findOne(branch.getCurrency());
-        CatalogItemEntity catalogItemEntity = CatalogItemEntity
-                .builder().id(catalogItemDTO.getId()).build();
+        CurrencyOneDTO currencyOne = this.currencyService.findOne(branch.getCurrency());
+        CurrencyEntity currencyEntity = CurrencyEntity
+                .builder().id(currencyOne.getId()).build();
 
-        branchEntity.setCurrency(catalogItemEntity);
+        branchEntity.setCurrency(currencyEntity);
         branchEntity.setName(branch.getName());
         branchEntity.setAddress(branch.getAddress());
         branchEntity.setCity(branch.getCity());
