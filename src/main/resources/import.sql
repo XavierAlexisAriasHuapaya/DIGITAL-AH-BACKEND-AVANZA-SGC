@@ -16,10 +16,6 @@ INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'NIF', tr
 INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CC', true);
 INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CI', true);
 
-INSERT INTO master_catalog (name, status) VALUES ('Currency', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (3, 'PEN', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (3, 'USD', true);
-
 INSERT INTO companies (country_id, business_name, trade_name, tax_id, address, city, phone, email, created_at, updated_at, status) VALUES (1, 'SGC', 'AH', '20191095025', 'Av. Siempre Viva 123', 'Lima', '900192119', 'sgc@ah.org', NOW(), NOW(), true);
 
 INSERT INTO roles (company_id, name, description, created_at, updated_at, status) VALUES (1, 'ROLE_ADMIN', 'Administrator role', NOW(), NOW(), true);
