@@ -1,20 +1,34 @@
 INSERT INTO master_catalog (name, status) VALUES ('Countries', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Peru', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Chile', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Colombia', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Argentina', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Ecuador', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (1, 'Mexico', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Peru', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Chile', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Colombia', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Argentina', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Ecuador', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (1, 'Mexico', '', '', true);
 
 INSERT INTO master_catalog (name, status) VALUES ('Document Type', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'DNI', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'RUC', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CE', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'RUT', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CUIT', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'NIF', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CC', true);
-INSERT into catalog_items (master_catalog_id, name, status) VALUES (2, 'CI', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'DNI', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'RUC', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'CE', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'RUT', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'CUIT', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'NIF', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'CC', '', '', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (2, 'CI', '', '', true);
+
+INSERT INTO master_catalog (name, status) VALUES ('Unit of Measure', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Unidad', 'UND', 'NIU', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Servicio', 'SERV', 'ZZ', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Caja', 'CAJ', 'BX', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Gramos', 'GR', 'GRM', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Kilos', 'KG', 'KGM', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Litros', 'LT', 'LTR', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Mililitro', 'ML', 'MLT', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Centimetro', 'CM', 'CMT', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Metro', 'M', 'MTR', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Saco', 'SCO', 'SA', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Piezas', 'PZ', 'C62', true);
+INSERT into catalog_items (master_catalog_id, name, value, code, status) VALUES (3, 'Par', 'PAR', 'PR', true);
 
 INSERT INTO companies (country_id, business_name, trade_name, tax_id, address, city, phone, email, created_at, updated_at, status) VALUES (1, 'SGC', 'AH', '20191095025', 'Av. Siempre Viva 123', 'Lima', '900192119', 'sgc@ah.org', NOW(), NOW(), true);
 
